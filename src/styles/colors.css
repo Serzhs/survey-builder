@@ -1,0 +1,17 @@
+:root {
+  --color-primary: #514f4f;
+
+  --body-surface: rgb(170, 246, 186);
+  --content-surface: #fff;
+
+  --button-bg-color: #64c564;
+  --button-text-color: #fff;
+
+  --border-color: #c1c1c1;
+
+  --likert-1-color: #e53935; /* 🔴 Very often */
+  --likert-2-color: #fb8c00; /* 🟠 Quite often */
+  --likert-3-color: #fdd835; /* 🟡 Sometimes */
+  --likert-4-color: #8bc34a; /* 🟢 Rarely */
+  --likert-5-color: #43a047; /* 🟢 Never */
+}
