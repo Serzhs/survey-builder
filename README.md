@@ -1,5 +1,98 @@
-# Vue 3 + TypeScript + Vite
+# 📝 Survey Builder
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A modern, component-based **Survey Builder** built with Vue 3, Vite, and TypeScript. This tool allows you to create dynamic, customizable surveys with a clean developer experience and fast build times.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+---
+
+## 🚀 Features
+
+- Vue 3 with `<script setup>` syntax  
+- TypeScript + type-checking with `vue-tsc`  
+- Linting via ESLint  
+- Code formatting with Prettier  
+- Hot module replacement (HMR) in dev mode  
+- Production-ready build with Vite  
+
+---
+
+## 📦 Project Setup
+
+Install dependencies:
+
+```
+npm install
+```
+
+---
+
+## 🛠 Commands
+
+**Start development server**  
+Runs the app in development mode at http://localhost:5173
+
+```
+npm run dev
+```
+
+---
+
+**Build for production**  
+Performs type checking and then builds the app
+
+```
+npm run build
+```
+
+---
+
+**Preview the production build**
+
+```
+npm run preview
+```
+
+---
+
+**Type check (no output files)**
+
+```
+npm run type-check
+```
+
+---
+
+**Lint code with ESLint**
+
+```
+npm run lint
+```
+
+---
+
+**Format code with Prettier**
+
+```
+npm run format
+```
+
+---
+
+## 🧪 Tech Stack
+
+- Vue 3  
+- Vite  
+- TypeScript  
+- ESLint  
+- Prettier  
+
+---
+
+## 🧑‍💻 Author
+
+Serzhs – GitHub: [@Serzhs](https://github.com/Serzhs)
+
+---
+
+## 📄 License
+
+MIT
