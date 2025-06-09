@@ -6,12 +6,12 @@ A modern, component-based **Survey Builder** built with Vue 3, Vite, and TypeScr
 
 ## 🚀 Features
 
-- Vue 3 with `<script setup>` syntax  
-- TypeScript + type-checking with `vue-tsc`  
-- Linting via ESLint  
-- Code formatting with Prettier  
-- Hot module replacement (HMR) in dev mode  
-- Production-ready build with Vite  
+- Vue 3 with `<script setup>` syntax
+- TypeScript + type-checking with `vue-tsc`
+- Linting via ESLint
+- Code formatting with Prettier
+- Hot module replacement (HMR) in dev mode
+- Production-ready build with Vite
 
 ---
 
@@ -79,11 +79,11 @@ npm run format
 
 ## 🧪 Tech Stack
 
-- Vue 3  
-- Vite  
-- TypeScript  
-- ESLint  
-- Prettier  
+- Vue 3
+- Vite
+- TypeScript
+- ESLint
+- Prettier
 
 ---
 

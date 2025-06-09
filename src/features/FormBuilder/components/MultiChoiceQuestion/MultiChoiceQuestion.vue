@@ -55,35 +55,49 @@ const labelsUpdateHandler = (value: string, index: number) => {
           @update:modelValue="(value) => $emit('update:label', value)"
         />
       </Box>
-      <div class="answer-options">
-        <template v-for="(answerLabel, index) in labels">
-          <Box direction="column" :gap="2">
-            <Input
-              :model-value="answerLabel"
-              required
-              :placeholder="RAGlabels[index]"
-              :maxlength="50"
-              @update:modelValue="(value) => labelsUpdateHandler(value, index)"
-            />
-            <span :class="`RAGlabel RAGlabel--${index + 1}`">
-              <template v-if="RAGEnabled">
-                {{ RAGlabels[index] }}
-              </template>
-              &nbsp;
-            </span>
-          </Box>
-        </template>
-      </div>
+      <Box direction="column" :gap="1">
+        <Text type="label"> Your answer labels: </Text>
+        <div class="answer-options">
+          <template v-for="(answerLabel, index) in labels">
+            <div class="answer-option">
+              <Input
+                :model-value="answerLabel"
+                required
+                :placeholder="RAGlabels[index]"
+                :maxlength="50"
+                @update:modelValue="
+                  (value) => labelsUpdateHandler(value, index)
+                "
+              />
+              <span :class="`RAGlabel RAGlabel--${index + 1}`">
+                <template v-if="RAGEnabled">
+                  {{ RAGlabels[index] }}
+                </template>
+                &nbsp;
+              </span>
+            </div>
+          </template>
+        </div>
+      </Box>
     </Box>
   </QuestionCard>
 </template>
 
 <style scoped>
 .answer-options {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
   gap: 1rem;
   padding-bottom: 1rem;
+}
+
+.answer-option {
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 20%;
+  min-width: 100px;
 }
 
 .RAGlabel {

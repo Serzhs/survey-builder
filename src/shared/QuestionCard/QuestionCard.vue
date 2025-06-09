@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Checkbox from '../Checkbox/Checkbox.vue'
 import Text from '../Text/Text.vue'
+import Box from '../Box/Box.vue'
 
 defineProps<{
   questionType: string
@@ -47,7 +48,7 @@ defineEmits<{
       <slot></slot>
     </div>
 
-    <Box :gap="8">
+    <Box :gap="6" wrap>
       <Checkbox
         :model-value="required"
         @update:model-value="(value) => $emit('update:required', value)"
@@ -79,9 +80,8 @@ defineEmits<{
 }
 
 .type {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  display: block;
+  text-align: right;
 }
 
 .delete {
