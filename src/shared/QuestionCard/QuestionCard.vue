@@ -2,11 +2,13 @@
 import Checkbox from '../Checkbox/Checkbox.vue'
 import Text from '../Text/Text.vue'
 import Box from '../Box/Box.vue'
+import Headings from '../Headings/Headings.vue'
 
 defineProps<{
   questionType: string
   required: boolean
   RAGEnabled?: boolean
+  order: number
   first: boolean
   last: boolean
 }>()
@@ -21,24 +23,27 @@ defineEmits<{
 
 <template>
   <div class="card">
-    <div class="position-button-wrapper">
-      <button
-        class="position-button"
-        type="button"
-        :disabled="first"
-        @click="$emit('update:position', -1)"
-      >
-        ↑
-      </button>
-      <button
-        class="position-button"
-        type="button"
-        :disabled="last"
-        @click="$emit('update:position', 1)"
-      >
-        ↓
-      </button>
-    </div>
+    <Box align="center" :gap="2">
+      <Headings type="h3">#{{ order }}</Headings>
+      <Box :gap="2">
+        <button
+          class="position-button"
+          type="button"
+          :disabled="first"
+          @click="$emit('update:position', -1)"
+        >
+          ↑
+        </button>
+        <button
+          class="position-button"
+          type="button"
+          :disabled="last"
+          @click="$emit('update:position', 1)"
+        >
+          ↓
+        </button>
+      </Box>
+    </Box>
 
     <button @click="$emit('delete')" class="delete" type="button">
       Delete
@@ -72,7 +77,7 @@ defineEmits<{
 .card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   border: 1px solid var(--border-color);
   padding: 1rem;
   border-radius: 5px;
@@ -98,12 +103,6 @@ defineEmits<{
   &:hover {
     opacity: 0.7;
   }
-}
-
-.position-button-wrapper {
-  display: flex;
-  gap: 0.5rem;
-  padding-bottom: 1rem;
 }
 
 .position-button {

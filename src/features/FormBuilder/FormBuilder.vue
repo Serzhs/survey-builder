@@ -63,6 +63,7 @@ const submitHandler = () => {
       <template v-for="(question, index) in questions" :key="question.id">
         <template v-if="question.type === 'TextQuestion'">
           <TextQuestion
+            :order="index + 1"
             :first="index === 0"
             :last="index === questions.length - 1"
             :label="question.label"
@@ -77,6 +78,7 @@ const submitHandler = () => {
 
         <template v-if="question.type === 'MultiChoiceQuestion'">
           <MultiChoiceQuestion
+            :order="index + 1"
             :first="index === 0"
             :last="index === questions.length - 1"
             :label="question.label"

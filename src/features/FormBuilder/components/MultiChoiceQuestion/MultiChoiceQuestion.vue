@@ -11,6 +11,7 @@ const props = defineProps<{
   required: boolean
   RAGEnabled: boolean
   labels: string[]
+  order: number
   first: boolean
   last: boolean
 }>()
@@ -38,6 +39,7 @@ const labelsUpdateHandler = (value: string, index: number) => {
     question-type="Multi choice single select question"
     :required="required"
     :RAGEnabled="RAGEnabled"
+    :order="order"
     :first="first"
     :last="last"
     @update:required="(value) => $emit('update:required', value)"

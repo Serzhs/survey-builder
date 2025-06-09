@@ -6,6 +6,7 @@ import QuestionCard from '../../../../shared/QuestionCard/QuestionCard.vue'
 defineProps<{
   label: string
   required: boolean
+  order: number
   first: boolean
   last: boolean
 }>()
@@ -22,6 +23,7 @@ defineEmits<{
   <QuestionCard
     question-type="Text question"
     :required="required"
+    :order="order"
     :first="first"
     :last="last"
     @update:required="(value) => $emit('update:required', value)"
